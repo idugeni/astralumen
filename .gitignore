@@ -18,7 +18,8 @@
 /out/
 
 # turbo
-+ .turbo
+.turbo
+.turbo/daemon
 
 # production
 /build
