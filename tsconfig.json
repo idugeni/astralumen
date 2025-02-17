@@ -1,27 +1,30 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
+    "target": "ESNext", // Latest ECMAScript version
+    "lib": ["dom", "dom.iterable", "ESNext"], // Browser APIs and latest JS types
+    "allowJs": true, // Allow JavaScript files
+    "skipLibCheck": true, // Skip declaration file checking (faster)
+    "strict": true, // Enable all strict type checks
+    // ... other strict options (consider enabling gradually)
+    "noEmit": true, // Don't compile JS (type checking only)
+    "esModuleInterop": true, // CommonJS/ES module interop
+    "module": "ESNext", // Latest ECMAScript modules
+    "moduleResolution": "bundler", // Bundler-friendly module resolution
+    "resolveJsonModule": true, // Import JSON files
+    "isolatedModules": true, // Independent module compilation
+    "jsx": "preserve", // Preserve JSX syntax (React)
+    "incremental": true, // Incremental compilation (faster rebuilds)
     "plugins": [
       {
         "name": "next"
       }
-    ],
+    ], // Next.js plugin
     "paths": {
       "@/*": ["./src/*"]
-    }
+    }, // Path aliases
+    "noEmitOnError": true, // Don't emit JS on errors (optional)
+    "checkJs": false // Check JS files (optional)
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"], // Included files
+  "exclude": ["node_modules"] // Excluded files
 }
