@@ -19,7 +19,6 @@
 
 # turbo
 .turbo
-.turbo/daemon
 
 # production
 /build
