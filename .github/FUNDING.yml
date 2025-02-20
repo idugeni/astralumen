@@ -1,23 +1,14 @@
 # FUNDING.yml
 # Funding configuration for this repository.
 # This file is used by GitHub to display funding options on your repository's page.
-# Please replace the placeholder URLs with your actual funding page URLs.
-# Remove any platforms that you do not use.
+# Each entry includes two usernames for the corresponding funding platform.
 
-github: ["https://github.com/sponsors/AlphaDev"]
-
-patreon: "https://www.patreon.com/BetaCreator"
-
-open_collective: "https://opencollective.com/GammaCollective"
-
-ko_fi: "https://ko-fi.com/DeltaSupport"
-
-tidelift: "https://tidelift.com/funding/github/EpsilonSponsor"
-
-buymeacoffee: "https://www.buymeacoffee.com/ZetaCoffee"
-
-liberapay: "https://liberapay.com/ThetaFund"
-
-paypal: "https://paypal.me/IotaDonations"
-
-flattr: "https://flattr.com/submit/auto?user=KappaFlattr"
+github: ["astra", "lumen"]
+patreon: ["astra", "lumen"]
+open_collective: ["astra", "lumen"]
+ko_fi: ["astra", "lumen"]
+tidelift: ["astra", "lumen"]
+buymeacoffee: ["astra", "lumen"]
+liberapay: ["astra", "lumen"]
+paypal: ["astra", "lumen"]
+flattr: ["astra", "lumen"]
