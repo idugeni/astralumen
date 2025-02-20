@@ -3,28 +3,20 @@
 # This file is used by GitHub to display funding options on your repository's page.
 # Each entry includes two usernames for the corresponding funding platform.
 
-github:
-  - penjelajah_malam
-  - senja_pagi
-  - bintang_utara
-patreon:
-  - ombak_tenang
-  - gunung_berapi
-open_collective:
-  - hutan_rimba
-  - sungai_meluap
-ko_fi:
-  - awan_mendung
-  - matahari_terbit
-liberapay:
-  - angin_segar
-  - embun_pagi
-issuehunt:
-  - bulan_sabit
-  - planet_biru
-otechie:
-  - bintang_jatuh
-  - komet_malam
-custom:
-  - https://saweria.com/pelangi_indah
-  - https://trakteer.id/cahaya_harapan
+github: [langit_senja, bukit_hijau, awan_kelabu]
+patreon: [laut_bergelombang, angin_pegunungan]
+open_collective: [kabut_pagi, hujan_petir]
+ko_fi: [pelangi_sore, rembulan_malam]
+liberapay: [bintang_fajar, embun_segar]
+issuehunt: [pohon_rindang, air_terjun]
+otechie: [gunung_tinggi, mega_mendung]
+tidelift: "npm/astralumen"
+community_bridge: "astral-archipelago"
+buy_me_a_coffee: [mentari_terbit]
+polar: [cahaya_bintang]
+custom: [
+  "https://saweria.com/bunga_melati",
+  "https://trakteer.id/rajawali_terbang",
+  "https://sociabuzz.com/kunang_kunang",
+  "https://karyakarsa.com/elang_perkasa"
+]
