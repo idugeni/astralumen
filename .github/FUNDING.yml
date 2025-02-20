@@ -3,12 +3,28 @@
 # This file is used by GitHub to display funding options on your repository's page.
 # Each entry includes two usernames for the corresponding funding platform.
 
-github: ["astra", "lumen"]
-patreon: ["astra", "lumen"]
-open_collective: ["astra", "lumen"]
-ko_fi: ["astra", "lumen"]
-tidelift: ["astra", "lumen"]
-buymeacoffee: ["astra", "lumen"]
-liberapay: ["astra", "lumen"]
-paypal: ["astra", "lumen"]
-flattr: ["astra", "lumen"]
+github:
+  - penjelajah_malam
+  - senja_pagi
+  - bintang_utara
+patreon:
+  - ombak_tenang
+  - gunung_berapi
+open_collective:
+  - hutan_rimba
+  - sungai_meluap
+ko_fi:
+  - awan_mendung
+  - matahari_terbit
+liberapay:
+  - angin_segar
+  - embun_pagi
+issuehunt:
+  - bulan_sabit
+  - planet_biru
+otechie:
+  - bintang_jatuh
+  - komet_malam
+custom:
+  - https://saweria.com/pelangi_indah
+  - https://trakteer.id/cahaya_harapan
