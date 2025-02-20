@@ -1,22 +1,37 @@
-# FUNDING.yml
-# Funding configuration for this repository.
-# This file is used by GitHub to display funding options on your repository's page.
-# Each entry includes two usernames for the corresponding funding platform.
+# Funding for AstraLumen
 
-github: [langit_senja, bukit_hijau, awan_kelabu]
-patreon: [laut_bergelombang, angin_pegunungan]
-open_collective: [kabut_pagi, hujan_petir]
-ko_fi: [pelangi_sore, rembulan_malam]
-liberapay: [bintang_fajar, embun_segar]
-issuehunt: [pohon_rindang, air_terjun]
-otechie: [gunung_tinggi, mega_mendung]
-tidelift: "npm/astralumen"
-community_bridge: "astral-archipelago"
-buy_me_a_coffee: [mentari_terbit]
-polar: [cahaya_bintang]
-custom: [
-  "https://saweria.com/bunga_melati",
-  "https://trakteer.id/rajawali_terbang",
-  "https://sociabuzz.com/kunang_kunang",
-  "https://karyakarsa.com/elang_perkasa"
-]
+# LFX Mentorship (formerly CommunityBridge)
+community_bridge: 
+
+# GitHub Sponsors
+github: [idugeni, rutanwonosobo, sayaptawon]
+
+# IssueHunt
+issuehunt: 
+
+# Ko-fi
+ko_fi: eliyantosarage
+
+# Liberapay
+liberapay: 
+
+# Open Collective
+open_collective: 
+
+# Patreon
+patreon: 
+
+# Tidelift
+tidelift: 
+
+# Polar
+polar: 
+
+# Buy Me a Coffee
+buy_me_a_coffee: eliyantosarage
+
+# thanks.dev
+thanks_dev: u/gh/idugeni
+
+# Custom URLs
+custom: []
