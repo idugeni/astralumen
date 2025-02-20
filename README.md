@@ -1,15 +1,24 @@
 # AstraLumen
 
 <p align="center">
+    <!-- Project Stats -->
     <img src="https://img.shields.io/github/languages/top/idugeni/astralumen" alt="GitHub top language">
     <img src="https://img.shields.io/github/languages/count/idugeni/astralumen" alt="GitHub language count">
     <img src="https://img.shields.io/github/forks/idugeni/astralumen?style=social" alt="GitHub forks">
     <img src="https://img.shields.io/github/stars/idugeni/astralumen?style=social" alt="GitHub stars">
     <img src="https://img.shields.io/github/watchers/idugeni/astralumen?style=social" alt="GitHub watchers">
+</p>
+
+<p align="center">
+    <!-- Issues & PRs -->
     <img src="https://img.shields.io/github/issues/idugeni/astralumen" alt="GitHub issues">
     <img src="https://img.shields.io/github/issues-pr/idugeni/astralumen" alt="GitHub pull requests">
     <img src="https://img.shields.io/github/contributors/idugeni/astralumen" alt="GitHub contributors">
     <img src="https://img.shields.io/github/last-commit/idugeni/astralumen" alt="GitHub last commit">
+</p>
+
+<p align="center">
+    <!-- Technology & License -->
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT">
     <img src="https://img.shields.io/badge/Next.js-15-blue" alt="Next.js">
     <img src="https://img.shields.io/badge/TailwindCSS-v4-blue" alt="Tailwind CSS">
