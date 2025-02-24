@@ -27,6 +27,25 @@
 
 AstraLumen is a futuristic **Next.js 15** theme that combines cutting-edge design with the elegance of **Tailwind CSS** and **Shadcn UI** to create stunning, responsive web experiences.
 
+## Table of Contents
+
+- [AstraLumen](#astralumen)
+- [Key Features](#key-features)
+- [Visual Preview](#visual-preview)
+- [Installation Guide](#installation-guide)
+  - [Prerequisites](#prerequisites)
+  - [Setup Instructions](#setup-instructions)
+- [Development Scripts](#development-scripts)
+- [Project Structure](#project-structure)
+- [Technical Documentation](#technical-documentation)
+  - [Core Technologies](#core-technologies)
+- [Author](#author)
+- [License](#license)
+- [Contributing Guidelines](#contributing-guidelines)
+  - [Contribution Requirements](#contribution-requirements)
+- [Support and Contact](#support-and-contact)
+- [Acknowledgements](#acknowledgements)
+
 ## Key Features
 
 * **Next.js 15**: Built on the latest version for optimal performance and enhanced developer experience.
@@ -101,75 +120,114 @@ npm run check-types
 
 ```sh
 astralumen/
-├── README.md
-├── components.json
-├── eslint.config.mjs
-├── next.config.ts
-├── package.json
-├── postcss.config.mjs
-├── tsconfig.json
-├── turbo.json
-├── public/
-└── src/
-    ├── app/
-    │   ├── globals.css
-    │   ├── icon.tsx
-    │   ├── layout.tsx
-    │   └── page.tsx
-    ├── components/
-    │   ├── theme-provider.tsx
-    │   └── ui/
-    │       ├── accordion.tsx
-    │       ├── alert-dialog.tsx
-    │       ├── alert.tsx
-    │       ├── aspect-ratio.tsx
-    │       ├── avatar.tsx
-    │       ├── badge.tsx
-    │       ├── breadcrumb.tsx
-    │       ├── button.tsx
-    │       ├── calendar.tsx
-    │       ├── card.tsx
-    │       ├── carousel.tsx
-    │       ├── chart.tsx
-    │       ├── checkbox.tsx
-    │       ├── collapsible.tsx
-    │       ├── command.tsx
-    │       ├── context-menu.tsx
-    │       ├── dialog.tsx
-    │       ├── drawer.tsx
-    │       ├── dropdown-menu.tsx
-    │       ├── form.tsx
-    │       ├── hover-card.tsx
-    │       ├── input-otp.tsx
-    │       ├── input.tsx
-    │       ├── label.tsx
-    │       ├── menubar.tsx
-    │       ├── navigation-menu.tsx
-    │       ├── pagination.tsx
-    │       ├── popover.tsx
-    │       ├── progress.tsx
-    │       ├── radio-group.tsx
-    │       ├── resizable.tsx
-    │       ├── scroll-area.tsx
-    │       ├── select.tsx
-    │       ├── separator.tsx
-    │       ├── sheet.tsx
-    │       ├── sidebar.tsx
-    │       ├── skeleton.tsx
-    │       ├── slider.tsx
-    │       ├── sonner.tsx
-    │       ├── switch.tsx
-    │       ├── table.tsx
-    │       ├── tabs.tsx
-    │       ├── textarea.tsx
-    │       ├── toggle-group.tsx
-    │       ├── toggle.tsx
-    │       └── tooltip.tsx
-    ├── hooks/
-    │   └── use-mobile.ts
-    └── lib/
-        ├── Metadata.ts
-        └── utils.ts
+├─ .github
+│  ├─ ISSUE_TEMPLATE
+│  │  ├─ bug_report.md
+│  │  └─ feature_request.md
+│  ├─ workflows
+│  │  └─ codeql.yml
+│  ├─ FUNDING.yml
+│  └─ PULL_REQUEST_TEMPLATE.md
+├─ public
+│  ├─ astralumen.png
+│  ├─ file.svg
+│  ├─ globe.svg
+│  ├─ next.svg
+│  ├─ vercel.svg
+│  └─ window.svg
+├─ src
+│  ├─ app
+│  │  ├─ api
+│  │  │  └─ setup
+│  │  │     └─ route.ts
+│  │  ├─ setup
+│  │  │  └─ page.tsx
+│  │  ├─ favicon.ico
+│  │  ├─ globals.css
+│  │  ├─ icon.tsx
+│  │  ├─ layout.tsx
+│  │  └─ page.tsx
+│  ├─ components
+│  │  ├─ setup
+│  │  │  ├─ GeneralSettingsForm.tsx
+│  │  │  └─ MetadataSettingsForm.tsx
+│  │  ├─ ui
+│  │  │  ├─ accordion.tsx
+│  │  │  ├─ alert-dialog.tsx
+│  │  │  ├─ alert.tsx
+│  │  │  ├─ aspect-ratio.tsx
+│  │  │  ├─ avatar.tsx
+│  │  │  ├─ badge.tsx
+│  │  │  ├─ breadcrumb.tsx
+│  │  │  ├─ button.tsx
+│  │  │  ├─ calendar.tsx
+│  │  │  ├─ card.tsx
+│  │  │  ├─ carousel.tsx
+│  │  │  ├─ chart.tsx
+│  │  │  ├─ checkbox.tsx
+│  │  │  ├─ collapsible.tsx
+│  │  │  ├─ command.tsx
+│  │  │  ├─ context-menu.tsx
+│  │  │  ├─ dialog.tsx
+│  │  │  ├─ drawer.tsx
+│  │  │  ├─ dropdown-menu.tsx
+│  │  │  ├─ form.tsx
+│  │  │  ├─ hover-card.tsx
+│  │  │  ├─ input-otp.tsx
+│  │  │  ├─ input.tsx
+│  │  │  ├─ label.tsx
+│  │  │  ├─ menubar.tsx
+│  │  │  ├─ navigation-menu.tsx
+│  │  │  ├─ pagination.tsx
+│  │  │  ├─ popover.tsx
+│  │  │  ├─ progress.tsx
+│  │  │  ├─ radio-group.tsx
+│  │  │  ├─ resizable.tsx
+│  │  │  ├─ scroll-area.tsx
+│  │  │  ├─ select.tsx
+│  │  │  ├─ separator.tsx
+│  │  │  ├─ sheet.tsx
+│  │  │  ├─ sidebar.tsx
+│  │  │  ├─ skeleton.tsx
+│  │  │  ├─ slider.tsx
+│  │  │  ├─ sonner.tsx
+│  │  │  ├─ switch.tsx
+│  │  │  ├─ table.tsx
+│  │  │  ├─ tabs.tsx
+│  │  │  ├─ textarea.tsx
+│  │  │  ├─ toggle-group.tsx
+│  │  │  ├─ toggle.tsx
+│  │  │  └─ tooltip.tsx
+│  │  └─ theme-provider.tsx
+│  ├─ constants
+│  │  └─ setup.ts
+│  ├─ hooks
+│  │  └─ use-mobile.ts
+│  ├─ lib
+│  │  ├─ config.ts
+│  │  ├─ Metadata.ts
+│  │  └─ utils.ts
+│  ├─ services
+│  │  └─ setupService.ts
+│  └─ types
+│     ├─ env.d.ts
+│     └─ setup.ts
+├─ .gitattributes
+├─ .gitignore
+├─ CODE_OF_CONDUCT.md
+├─ components.json
+├─ CONTRIBUTING.md
+├─ eslint.config.mjs
+├─ LICENCE
+├─ next.config.ts
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.mjs
+├─ README.md
+├─ SECURITY.md
+├─ SUPPORT.md
+├─ tsconfig.json
+└─ turbo.json
 ```
 
 ## Technical Documentation
