@@ -170,7 +170,7 @@ export default function Home() {
             </p>
             <div className="flex items-center gap-6">
               <Button variant="ghost" size="icon" className="rounded-full" asChild>
-                <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" className={cn("transition-colors duration-200 hover:text-primary")}>
+                <Link href="https://twitter.com/astralumen" target="_blank" rel="noopener noreferrer" className={cn("transition-colors duration-200 hover:text-primary")}>
                   <Twitter className="h-4 w-4" />
                   <span className="sr-only">Twitter</span>
                 </Link>
@@ -182,7 +182,7 @@ export default function Home() {
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" className="rounded-full" asChild>
-                <Link href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className={cn("transition-colors duration-200 hover:text-primary")}>
+                <Link href="https://www.linkedin.com/astralumen" target="_blank" rel="noopener noreferrer" className={cn("transition-colors duration-200 hover:text-primary")}>
                   <Linkedin className="h-4 w-4" />
                   <span className="sr-only">LinkedIn</span>
                 </Link>
@@ -194,7 +194,7 @@ export default function Home() {
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" className="rounded-full" asChild>
-                <Link href="/" target="_blank" rel="noopener noreferrer" className={cn("transition-colors duration-200 hover:text-primary")}>
+                <Link href="https://astralumen.vercel.app" target="_blank" rel="noopener noreferrer" className={cn("transition-colors duration-200 hover:text-primary")}>
                   <Globe className="h-4 w-4" />
                   <span className="sr-only">Website</span>
                 </Link>
