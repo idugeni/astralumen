@@ -57,7 +57,7 @@ export function FaqSection() {
   ];
 
   return (
-    <div className="py-16">
+    <div className="py-16 px-4">
       <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
       <Accordion type="single" collapsible className="max-w-2xl mx-auto">
         {faqItems.map((item, i) => (

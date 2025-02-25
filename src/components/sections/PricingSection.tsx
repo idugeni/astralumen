@@ -74,7 +74,7 @@ export function PricingSection() {
   ];
 
   return (
-    <div className="mx-auto py-16 px-4">
+    <div className="mx-auto py-16">
       <h2 className="text-3xl font-bold text-center mb-2">Choose Your Plan</h2>
       <p className="text-muted-foreground text-center mb-8">Solutions for every need and budget</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

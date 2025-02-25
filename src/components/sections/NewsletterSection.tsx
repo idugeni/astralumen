@@ -35,7 +35,7 @@ function AnimatedElement({ children, delay = 0 }: { children: ReactNode; delay?:
 export function NewsletterSection() {
   return (
     <div className="py-16 bg-primary/5 rounded-2xl backdrop-blur-sm">
-      <div className="max-w-2xl mx-auto text-center">
+      <div className="max-w-2xl mx-auto text-center px-4">
         <AnimatedElement delay={100}>
           <h2 className="text-3xl font-bold mb-4">Stay Updated with AstraLumen</h2>
         </AnimatedElement>
