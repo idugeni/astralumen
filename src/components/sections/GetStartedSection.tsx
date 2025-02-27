@@ -41,21 +41,25 @@ function AnimatedElement({ children, delay = 0 }: { children: ReactNode; delay?:
 
 export function GetStartedSection() {
   return (
-    <div
-      id="get-started"
-      className="py-16 px-4 md:px-8 lg:px-16 bg-background text-foreground rounded-lg shadow-md"
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Kolom Kiri */}
-        <div className="flex flex-col items-center justify-center">
-          <AnimatedElement delay={100}>
-            <QrCode className="h-12 w-12 text-primary mb-4" />
-          </AnimatedElement>
-          <AnimatedElement delay={200}>
-            <h2 className="text-2xl md:text-3xl font-bold">Get Started</h2>
-          </AnimatedElement>
-          <AnimatedElement delay={300}>
-            <div className="mt-8">
+    <div id="get-started" className="relative my-16">
+      {/* Decorative Full-Width Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg shadow-md -z-10" />
+      <div className="relative py-16 bg-background text-foreground rounded-lg shadow-md w-full">
+        <div className="flex flex-col md:flex-row items-center">
+          {/* Left Column: Call to Action */}
+          <div className="md:w-1/2 flex flex-col items-start justify-center p-8 space-y-6">
+            <AnimatedElement delay={100}>
+              <div className="flex items-center space-x-3">
+                <QrCode className="h-12 w-12 text-primary" />
+                <h2 className="text-2xl md:text-3xl font-bold">Get Started</h2>
+              </div>
+            </AnimatedElement>
+            <AnimatedElement delay={200}>
+              <p className="text-base md:text-lg text-muted-foreground">
+                Begin your journey with our modern, professional platform designed for seamless deployment and outstanding performance.
+              </p>
+            </AnimatedElement>
+            <AnimatedElement delay={300}>
               <Button asChild className="rounded-lg">
                 <Link
                   href="https://vercel.com/new"
@@ -73,36 +77,38 @@ export function GetStartedSection() {
                   Deploy to Vercel
                 </Link>
               </Button>
-            </div>
-          </AnimatedElement>
-        </div>
-        {/* Kolom Kanan */}
-        <div className="prose prose-zinc dark:prose-invert max-w-none">
-          <AnimatedElement delay={100}>
-            <ol className="list-decimal pl-6 space-y-6 text-sm md:text-base font-mono">
-              <li>
-                Edit <code className="bg-muted px-2 py-1 rounded-md">src/app/page.tsx</code> to customize this page
-              </li>
-              <li>
-                Explore the components in <code className="bg-muted px-2 py-1 rounded-md">src/components</code>
-              </li>
-              <li>Deploy your site to Vercel for the best experience</li>
-            </ol>
-          </AnimatedElement>
-          <AnimatedElement delay={200}>
-            <div className="mt-8 flex justify-center">
-              <Button asChild variant="outline" className="rounded-lg">
-                <Link
-                  href="https://nextjs.org/docs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center"
-                >
-                  Documentation
-                </Link>
-              </Button>
-            </div>
-          </AnimatedElement>
+            </AnimatedElement>
+          </div>
+          {/* Vertical Divider for Medium Screens and Above */}
+          <div className="hidden md:block w-px bg-border h-48 mx-8" />
+          {/* Right Column: Step-by-Step Guide */}
+          <div className="md:w-1/2 p-8">
+            <AnimatedElement delay={100}>
+              <ol className="list-decimal pl-6 space-y-4 text-sm md:text-base font-mono">
+                <li>
+                  Edit <code className="bg-muted px-2 py-1 rounded-md">src/app/page.tsx</code> to customize this page.
+                </li>
+                <li>
+                  Explore components in <code className="bg-muted px-2 py-1 rounded-md">src/components</code>.
+                </li>
+                <li>Deploy your site to Vercel for the ultimate experience.</li>
+              </ol>
+            </AnimatedElement>
+            <AnimatedElement delay={200}>
+              <div className="mt-8 flex justify-center">
+                <Button asChild variant="outline" className="rounded-lg">
+                  <Link
+                    href="https://nextjs.org/docs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center"
+                  >
+                    Documentation
+                  </Link>
+                </Button>
+              </div>
+            </AnimatedElement>
+          </div>
         </div>
       </div>
     </div>

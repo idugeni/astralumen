@@ -14,10 +14,10 @@ import { PricingSection } from "@/components/sections/PricingSection";
 export default function Home() {
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-b from-background to-muted dark:from-zinc-900 dark:to-background">
+    <div className="w-full bg-gradient-to-b from-background to-muted dark:from-zinc-900 dark:to-background">
       <Header />
       
-      <main className="mx-auto px-4 pt-32 pb-16 flex-grow">
+      <main className="min-h-screen max-w-7xl mx-auto px-4 flex-grow">
         <HeroSection />
         <FeaturesSection />
         <FeatureShowcase />

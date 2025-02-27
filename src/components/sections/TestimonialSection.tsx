@@ -59,20 +59,20 @@ export function TestimonialSection() {
   ];
 
   return (
-    <div className="mx-auto py-16">
-      <h2 className="text-3xl font-bold text-center mb-8">What Our Users Say</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="container mx-auto my-16 py-16 px-4">
+      <h2 className="text-4xl font-bold text-center mb-12">Customer Testimonials</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {testimonials.map((testimonial, i) => (
           <AnimatedElement key={i} delay={i * 150}>
-            <Card className="backdrop-blur-sm border-border/40">
-              <CardContent className="p-6">
-                <p className="italic mb-4">&quot;{testimonial.content}&quot;</p>
-                <div className="flex items-center">
-                  <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center mr-3">
-                    <div className="h-4 w-4 rounded-full bg-primary" />
+            <Card className="flex flex-col h-full backdrop-blur-sm border border-border/40 hover:shadow-2xl transition-shadow duration-300">
+              <CardContent className="p-8 flex flex-col h-full">
+                <p className="italic mb-6 text-lg flex-grow">&quot;{testimonial.content}&quot;</p>
+                <div className="flex items-center mt-auto">
+                  <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center mr-4">
+                    <div className="h-5 w-5 rounded-full bg-primary" />
                   </div>
                   <div>
-                    <p className="font-medium">{testimonial.name}</p>
+                    <p className="font-semibold text-lg">{testimonial.name}</p>
                     <p className="text-sm text-muted-foreground">{testimonial.role}</p>
                   </div>
                 </div>

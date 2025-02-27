@@ -29,9 +29,11 @@ function FeatureCard({ feature, delayBase }: { feature: Feature; delayBase: numb
   }, [hasBeenVisible]);
 
   return (
-    <div ref={ref}>
-      <Card className="backdrop-blur-sm border-border/40">
-        <CardContent className="p-6">
+    <div ref={ref} className="h-full">
+      <Card
+        className="flex flex-col h-full backdrop-blur-sm border border-border/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+      >
+        <CardContent className="flex flex-col h-full p-6">
           {/* Ikon */}
           <div
             className={`h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center mb-4 transition-all duration-700 ease-in-out ${
@@ -87,7 +89,9 @@ export function FeaturesSection() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
       {features.map((feature, i) => (
-        <FeatureCard key={i} feature={feature} delayBase={i * 150} />
+        <div key={i} className="h-full">
+          <FeatureCard feature={feature} delayBase={i * 150} />
+        </div>
       ))}
     </div>
   );

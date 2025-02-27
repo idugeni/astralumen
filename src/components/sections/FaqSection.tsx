@@ -54,21 +54,74 @@ export function FaqSection() {
       answer:
         "You can easily customize the theme via the globals.css file and tailwind.config.js to change colors, fonts, and other design aspects.",
     },
+    {
+      question: "What browsers are supported?",
+      answer:
+        "AstraLumen supports all modern browsers for a smooth and reliable experience.",
+    },
+    {
+      question: "How do I contribute to the project?",
+      answer:
+        "You can fork the repository and submit a pull request for review. We welcome contributions from the community.",
+    },
+    {
+      question: "Is there a community for AstraLumen?",
+      answer:
+        "Yes, we have an active community forum where you can collaborate, ask questions, and share ideas.",
+    },
+    {
+      question: "Where can I find documentation?",
+      answer:
+        "All documentation is available on our official website, providing you with comprehensive guides and API references.",
+    },
   ];
 
+  const leftItems = faqItems.slice(0, 4);
+  const rightItems = faqItems.slice(4);
+
   return (
-    <div className="py-16 px-4">
-      <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
-      <Accordion type="single" collapsible className="max-w-2xl mx-auto">
-        {faqItems.map((item, i) => (
-          <AnimatedElement key={i} delay={i * 150}>
-            <AccordionItem value={`item-${i + 1}`}>
-              <AccordionTrigger>{item.question}</AccordionTrigger>
-              <AccordionContent>{item.answer}</AccordionContent>
-            </AccordionItem>
-          </AnimatedElement>
-        ))}
-      </Accordion>
-    </div>
+    <section className="my-16 py-16 px-4">
+      <h2 className="text-3xl font-bold text-center text-foreground mb-8">
+        Frequently Asked Questions
+      </h2>
+      <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Kolom Kiri */}
+        <Accordion type="single" collapsible className="space-y-4">
+          {leftItems.map((item, index) => (
+            <AnimatedElement key={index} delay={index * 150}>
+              <AccordionItem
+                value={`left-item-${index}`}
+                className="border border-border rounded-md overflow-hidden"
+              >
+                <AccordionTrigger className="px-4 py-2 text-left text-lg font-medium transition-colors duration-300 hover:bg-muted">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="px-4 py-2 transition-all duration-300 ease-in-out text-foreground">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
+            </AnimatedElement>
+          ))}
+        </Accordion>
+        {/* Kolom Kanan */}
+        <Accordion type="single" collapsible className="space-y-4">
+          {rightItems.map((item, index) => (
+            <AnimatedElement key={index} delay={index * 150}>
+              <AccordionItem
+                value={`right-item-${index}`}
+                className="border border-border rounded-md overflow-hidden"
+              >
+                <AccordionTrigger className="px-4 py-2 text-left text-lg font-medium transition-colors duration-300 hover:bg-muted">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="px-4 py-2 transition-all duration-300 ease-in-out text-foreground">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
+            </AnimatedElement>
+          ))}
+        </Accordion>
+      </div>
+    </section>
   );
 }
