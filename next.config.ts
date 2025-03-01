@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    viewTransition: true, // Enable view transitions
+  },
   reactStrictMode: true, // Recommended for development to catch potential issues early.  Set to false in production if needed for performance.
   compiler: {
     // Enable styled-components if you use it.  Removes runtime CSS-in-JS overhead.
