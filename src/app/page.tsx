@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { FeaturesSection } from "@/components/sections/FeaturesSection";
+import { TechStack } from "@/components/sections/TechStack";
 import { GetStartedSection } from "@/components/sections/GetStartedSection";
 import { TestimonialSection } from "@/components/sections/TestimonialSection";
 import { FeatureShowcase } from "@/components/sections/FeatureShowcase";
@@ -20,6 +21,7 @@ export default function Home() {
       <main className="min-h-screen max-w-7xl mx-auto px-4 flex-grow">
         <HeroSection />
         <FeaturesSection />
+        <TechStack />
         <FeatureShowcase />
         <GetStartedSection />
         <TestimonialSection />
