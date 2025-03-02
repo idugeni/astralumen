@@ -1,11 +1,11 @@
-// src/components/sections/HeroSection.tsx
+// src/components/sections/Hero.tsx
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useEffect, useState, useRef } from "react";
 
-export function HeroSection() {
+export function Hero() {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 

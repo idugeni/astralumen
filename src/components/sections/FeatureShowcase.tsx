@@ -35,9 +35,9 @@ function FeatureItem({ feature, delayBase }: { feature: Feature; delayBase: numb
 	return (
 		<div ref={ref} className="group">
 			<div
-				className={`flex flex-col ${
+				className={`flex flex-col md:flex-row ${
 					feature.align === 'left' ? 'md:flex-row-reverse' : 'md:flex-row'
-				} gap-8 items-center p-6 rounded-2xl bg-muted/10 shadow-sm hover:shadow-lg transition-shadow duration-300`}
+				} gap-6 sm:gap-8 items-center p-4 sm:p-6 md:p-8 rounded-2xl bg-muted/10 shadow-sm hover:shadow-lg transition-shadow duration-300`}
 			>
 				{/* Visual Section */}
 				<div
@@ -47,11 +47,11 @@ function FeatureItem({ feature, delayBase }: { feature: Feature; delayBase: numb
 					style={{ transitionDelay: `${delayBase}ms` }}
 				>
 					{!hasBeenVisible ? (
-						<Skeleton className="h-64 rounded-2xl animate-pulse" />
+						<Skeleton className="h-48 sm:h-56 md:h-64 rounded-2xl animate-pulse" />
 					) : (
-						<div className="h-64 w-full bg-primary/10 rounded-2xl flex items-center justify-center overflow-hidden">
-							<div className="h-20 w-20 rounded-full bg-primary/20 flex items-center justify-center group-hover:ring-2 group-hover:ring-primary transition-all duration-300">
-								<div className="h-10 w-10 rounded-full bg-primary" />
+						<div className="h-48 sm:h-56 md:h-64 w-full bg-primary/10 rounded-2xl flex items-center justify-center overflow-hidden">
+							<div className="h-16 w-16 sm:h-20 sm:w-20 rounded-full bg-primary/20 flex items-center justify-center group-hover:ring-2 group-hover:ring-primary transition-all duration-300">
+								<div className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-primary" />
 							</div>
 						</div>
 					)}
@@ -59,7 +59,7 @@ function FeatureItem({ feature, delayBase }: { feature: Feature; delayBase: numb
 				{/* Text Section */}
 				<div className="flex-1">
 					<h3
-						className={`text-2xl font-bold mb-4 transition-all duration-700 ease-in-out ${
+						className={`text-xl sm:text-2xl md:text-3xl font-bold mb-3 transition-all duration-700 ease-in-out ${
 							isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
 						}`}
 						style={{ transitionDelay: `${delayBase + 100}ms` }}
@@ -72,14 +72,14 @@ function FeatureItem({ feature, delayBase }: { feature: Feature; delayBase: numb
 					</h3>
 					{!hasBeenVisible ? (
 						<span
-							className="text-muted-foreground mb-4 transition-all duration-700 ease-in-out inline-block"
+							className="text-muted-foreground mb-3 transition-all duration-700 ease-in-out inline-block"
 							style={{ transitionDelay: `${delayBase + 150}ms` }}
 						>
 							<Skeleton className="h-4 w-5/6 animate-pulse" />
 						</span>
 					) : (
 						<p
-							className={`text-muted-foreground mb-4 transition-all duration-700 ease-in-out ${
+							className={`text-sm sm:text-base md:text-lg text-muted-foreground mb-3 transition-all duration-700 ease-in-out ${
 								isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
 							}`}
 							style={{ transitionDelay: `${delayBase + 150}ms` }}
@@ -96,7 +96,7 @@ function FeatureItem({ feature, delayBase }: { feature: Feature; delayBase: numb
 						{!hasBeenVisible ? (
 							<Skeleton className="h-10 w-1/2 animate-pulse" />
 						) : (
-							<Button variant="outline" className="rounded-full" asChild>
+							<Button variant="outline" className="rounded-full text-sm sm:text-base" asChild>
 								<Link href={feature.link}>Learn More</Link>
 							</Button>
 						)}
@@ -133,9 +133,9 @@ export function FeatureShowcase() {
 	];
 
 	return (
-		<div className="my-16 py-16 px-4 md:px-8 lg:px-16 bg-background text-foreground rounded-lg shadow-md">
-			<h2 className="text-3xl font-bold text-center mb-8">Key Features</h2>
-			<div className="space-y-12">
+		<div className="my-12 py-12 bg-background text-foreground rounded-lg shadow-md">
+			<h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">Key Features</h2>
+			<div className="space-y-12 px-4">
 				{features.map((feature: Feature, i) => (
 					<FeatureItem key={i} feature={feature} delayBase={i * 150} />
 				))}

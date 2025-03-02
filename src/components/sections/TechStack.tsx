@@ -44,9 +44,9 @@ export function TechStack() {
   ];
 
   return (
-    <section className="w-full bg-background text-foreground py-20" ref={ref}>
+    <section className="w-full bg-background text-foreground my-12 py-12 rounded-lg shadow-md" ref={ref}>
       <div
-        className={`container mx-auto px-4 max-w-6xl transition-all duration-700 ease-in-out ${
+        className={`mx-auto px-4 max-w-7xl transition-all duration-700 ease-in-out ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
@@ -58,7 +58,7 @@ export function TechStack() {
             <Card
               key={index}
               style={{ transitionDelay: `${index * 150}ms` }}
-              className={`bg-surface border border-border overflow-hidden rounded-xl shadow-lg cursor-pointer transition-all duration-700 ease-in-out transform hover:shadow-xl hover:border-primary hover:-translate-y-1 ${
+              className={`bg-surface border border-border overflow-hidden rounded-xl shadow-lg transition-all duration-700 ease-in-out transform hover:shadow-xl hover:border-primary hover:-translate-y-1 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >

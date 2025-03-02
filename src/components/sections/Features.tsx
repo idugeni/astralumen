@@ -1,4 +1,4 @@
-// src/components/sections/FeaturesSection.tsx
+// src/components/sections/Features.tsx
 import { Card, CardContent } from "@/components/ui/card";
 import { useState, useEffect, useRef } from "react";
 
@@ -34,7 +34,7 @@ function FeatureCard({ feature, delayBase }: { feature: Feature; delayBase: numb
         className="flex flex-col h-full backdrop-blur-sm border border-border/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
       >
         <CardContent className="flex flex-col h-full p-6">
-          {/* Ikon */}
+          {/* Icon */}
           <div
             className={`h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center mb-4 transition-all duration-700 ease-in-out ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-3"
@@ -67,7 +67,7 @@ function FeatureCard({ feature, delayBase }: { feature: Feature; delayBase: numb
   );
 }
 
-export function FeaturesSection() {
+export function Features() {
   const features: Feature[] = [
     {
       title: "Modern Stack",

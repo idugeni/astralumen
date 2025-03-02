@@ -2,15 +2,15 @@
 
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { FeaturesSection } from "@/components/sections/FeaturesSection";
+import { Hero } from "@/components/sections/Hero";
+import { Features } from "@/components/sections/Features";
 import { TechStack } from "@/components/sections/TechStack";
-import { GetStartedSection } from "@/components/sections/GetStartedSection";
-import { TestimonialSection } from "@/components/sections/TestimonialSection";
+import { GetStarted } from "@/components/sections/GetStarted";
+import { Testimonial } from "@/components/sections/Testimonial";
 import { FeatureShowcase } from "@/components/sections/FeatureShowcase";
-import { FaqSection } from "@/components/sections/FaqSection";
-import { NewsletterSection } from "@/components/sections/NewsletterSection";
-import { PricingSection } from "@/components/sections/PricingSection";
+import { Faq } from "@/components/sections/Faq";
+import { Newsletter } from "@/components/sections/Newsletter";
+import { Pricing } from "@/components/sections/Pricing";
 
 export default function Home() {
 
@@ -19,15 +19,15 @@ export default function Home() {
       <Header />
       
       <main className="min-h-screen max-w-7xl mx-auto px-4 flex-grow">
-        <HeroSection />
-        <FeaturesSection />
+        <Hero />
+        <Features />
         <TechStack />
         <FeatureShowcase />
-        <GetStartedSection />
-        <TestimonialSection />
-        <PricingSection />
-        <FaqSection />
-        <NewsletterSection />
+        <GetStarted />
+        <Testimonial />
+        <Pricing />
+        <Faq />
+        <Newsletter />
       </main>
 
       <Footer />

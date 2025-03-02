@@ -1,17 +1,20 @@
-// src/components/sections/NewsletterSection.tsx
+// src/components/sections/Newsletter.tsx
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef, ReactNode } from "react";
 
-function AnimatedElement({ children, delay = 0 }: { children: ReactNode; delay?: number }) {
+interface AnimatedElementProps {
+  children: ReactNode;
+  delay?: number;
+}
+
+function AnimatedElement({ children, delay = 0 }: AnimatedElementProps) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          setIsVisible(entry.isIntersecting);
-        });
+        entries.forEach((entry) => setIsVisible(entry.isIntersecting));
       },
       { threshold: 0.1 }
     );
@@ -32,33 +35,35 @@ function AnimatedElement({ children, delay = 0 }: { children: ReactNode; delay?:
   );
 }
 
-export function NewsletterSection() {
+export function Newsletter() {
   return (
-    <div className="relative my-20 py-20 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl backdrop-blur-sm overflow-hidden">
+    <section className="relative my-12 py-12 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl backdrop-blur-sm overflow-hidden">
       {/* Decorative Background Pattern */}
       <div className="absolute inset-0 -z-10 bg-[url('/pattern.svg')] bg-cover bg-center opacity-20" />
       <div className="max-w-3xl mx-auto text-center px-4">
         <AnimatedElement delay={100}>
-          <h2 className="text-4xl font-bold text-foreground mb-6">Stay Updated with AstraLumen</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-6">
+            Stay Updated with AstraLumen
+          </h2>
         </AnimatedElement>
         <AnimatedElement delay={200}>
-          <p className="text-lg text-muted-foreground mb-10">
+          <p className="text-base sm:text-lg text-muted-foreground mb-10">
             Get the latest updates, tips, and tricks delivered straight to your inbox.
           </p>
         </AnimatedElement>
         <AnimatedElement delay={300}>
-          <div className="flex items-center gap-4 justify-center">
+          <form className="flex flex-col sm:flex-row items-center gap-4 justify-center">
             <input
               type="email"
               placeholder="Your Email"
-              className="flex-1 h-12 rounded-md border border-input bg-background px-4 py-2 text-base placeholder:text-muted-foreground focus:outline-none"
+              className="w-full sm:w-auto flex-1 h-12 rounded-md border border-input bg-background px-4 py-2 text-base placeholder:text-muted-foreground focus:outline-none"
             />
-            <Button type="submit" className="cursor-pointer rounded-md px-6 py-3 focus:outline-none">
+            <Button type="submit" className="rounded-md px-6 py-3 focus:outline-none">
               Subscribe
             </Button>
-          </div>
+          </form>
         </AnimatedElement>
       </div>
-    </div>
+    </section>
   );
 }

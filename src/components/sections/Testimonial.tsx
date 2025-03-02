@@ -1,4 +1,4 @@
-// src/components/sections/TestimonialSection.tsx
+// src/components/sections/Testimonial.tsx
 import { Card, CardContent } from "@/components/ui/card";
 import { useState, useEffect, useRef, ReactNode } from "react";
 
@@ -36,7 +36,7 @@ function AnimatedElement({ children, delay = 0 }: { children: ReactNode; delay?:
   );
 }
 
-export function TestimonialSection() {
+export function Testimonial() {
   const testimonials = [
     {
       name: "John Doe",
@@ -59,21 +59,25 @@ export function TestimonialSection() {
   ];
 
   return (
-    <div className="container mx-auto my-16 py-16 px-4">
-      <h2 className="text-4xl font-bold text-center mb-12">Customer Testimonials</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="mx-auto my-12 py-12">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8">
+        Customer Testimonials
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {testimonials.map((testimonial, i) => (
           <AnimatedElement key={i} delay={i * 150}>
-            <Card className="flex flex-col h-full backdrop-blur-sm border border-border/40 hover:shadow-2xl transition-shadow duration-300">
-              <CardContent className="p-8 flex flex-col h-full">
-                <p className="italic mb-6 text-lg flex-grow">&quot;{testimonial.content}&quot;</p>
+            <Card className="flex flex-col h-full backdrop-blur-sm border border-border/40 hover:shadow-xl transition-shadow duration-300">
+              <CardContent className="p-3 sm:p-4 md:p-6 flex flex-col h-full">
+                <p className="italic mb-3 sm:mb-4 text-sm sm:text-base flex-grow">
+                  &quot;{testimonial.content}&quot;
+                </p>
                 <div className="flex items-center mt-auto">
-                  <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center mr-4">
-                    <div className="h-5 w-5 rounded-full bg-primary" />
+                  <div className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-primary/20 flex items-center justify-center mr-2 sm:mr-3">
+                    <div className="h-3 w-3 sm:h-4 sm:w-4 rounded-full bg-primary" />
                   </div>
                   <div>
-                    <p className="font-semibold text-lg">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <p className="font-semibold text-sm sm:text-base">{testimonial.name}</p>
+                    <p className="text-[10px] sm:text-xs text-muted-foreground">{testimonial.role}</p>
                   </div>
                 </div>
               </CardContent>
