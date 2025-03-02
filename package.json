@@ -1,6 +1,6 @@
 {
   "name": "astralumen",
-  "version": "0.7.0-beta",
+  "version": "1.0.0-beta",
   "description": "AstraLumen is a futuristic Next.js 15 theme that combines cutting-edge design with the elegance of Tailwind CSS and Shadcn UI to create stunning, responsive web experiences.",
   "repository": {
     "type": "git",
